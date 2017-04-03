@@ -1,14 +1,13 @@
-# references:
-# * http://www.objc.io/issue-6/travis-ci.html
-# * https://github.com/supermarin/xcpretty#usage
-
-osx_image: xcode7.3
+osx_image: xcode8.3
 language: objective-c
-# cache: cocoapods
-# podfile: Example/Podfile
-# before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
+before_install:
+- gem install cocoapods
+- pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test -workspace Example/TDTSwiftyColor.xcworkspace -scheme TDTSwiftyColor-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
+- xcodebuild test -workspace Example/TDTSwiftyColor.xcworkspace -scheme TDTSwiftyColor_Tests
+  -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=10.0,name=iPhone 6'
+  ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
+notifications:
+  slack:
+    secure: L50kTMJ3atYAfavqepogfe2WBC64JUUtmK9xkSArHKQIetY2741fwIrcD1QgKzTv5nc6DnjATYcOIT+Qlt8t4GTJj1DkTOglmZF4bTzOrk6CnGD2LImUdWuxLRS3WJSxgez5Tlri89pEJkS3nwduHy5ksvwec21REJGbRIfoDrRlFsymp5TR6HymAtV7g5xSJ9CYqDocVXLRhZ0o/kGK6SBbk3dKiIC31r9dMWeqrLyvahdLQMn00B/F16KURtxCWh16+ehLO8ebOfApRfLeCm+q1X0RA9xSYaSDnDpvN1aa2NIeK6ZESzMnieQoe10bFfujN5GFLQWeJmoHPomhx5i4YYWJIaCLje7oS7e7Kj6HJBooPiJP/frNYXo/0Accf09kO8PEYFi4kHMv/p9kmBgKHuPxcrVQSpL4U1XposKAjekzKf6xIF2ThHCfCF+/crnDvq+MJz9zUO9i1/RfyYdF6AoxeG8XAIWKrZj5jN/hPd0HiimFd83+ayLf1WnN/2/4bf909HqU1w8na8tWkdHJ78+f8gsJ1nnQ1/auziTwbJ6ZqqSEonOg63LKNx+XUXchdk2xp4NWycmNIE+bUrNjjiRzwsz6IU4Nqqu10yXl5/jYs/q9mzwE0Rmc93aU9ELyzZJaZ9kXB2qs2gf4ydC6nchx+8kdoFdfvc7xofU=
