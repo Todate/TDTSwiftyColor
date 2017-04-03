@@ -22,7 +22,7 @@ pod "TDTSwiftyColor"
 ## Usage
 
 ```swift
-import TDTSwiftyString
+import TDTSwiftyColor
 ```
 
 ## Properties
