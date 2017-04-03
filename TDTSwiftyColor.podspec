@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'TDTSwiftyColor'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of TDTSwiftyColor.'
+  s.summary          = 'TDTSwiftyColor is UIColor extension for Swift.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+TDTSwiftyColor is UIColor extension for Swift.
+Depending on my need, I make modifications at any time.
                        DESC
 
   s.homepage         = 'https://github.com/Todate/TDTSwiftyColor'
@@ -31,7 +32,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'TDTSwiftyColor/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'TDTSwiftyColor' => ['TDTSwiftyColor/Assets/*.png']
   # }
