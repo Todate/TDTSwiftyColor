@@ -25,12 +25,8 @@ extension UIColor {
         )
     }
 
-    public var coreImageColor: CIColor {
-        return CIColor(color: self)
-    }
-
     public var components: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
-        let coreImageColor = self.coreImageColor
+        let coreImageColor = CIColor(color: self)
         return (coreImageColor.red, coreImageColor.green, coreImageColor.blue, coreImageColor.alpha)
     }
 
