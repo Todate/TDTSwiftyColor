@@ -4,7 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/TDTSwiftyColor.svg?style=flat)](http://cocoapods.org/pods/TDTSwiftyColor)
 [![License](https://img.shields.io/cocoapods/l/TDTSwiftyColor.svg?style=flat)](http://cocoapods.org/pods/TDTSwiftyColor)
 [![Platform](https://img.shields.io/cocoapods/p/TDTSwiftyColor.svg?style=flat)](http://cocoapods.org/pods/TDTSwiftyColor)
-[![Swift-4.1](http://img.shields.io/badge/Swift-3.0-brightgreen.svg)]()
+[![Swift-4.1](http://img.shields.io/badge/Swift-4.1-brightgreen.svg)]()
 
 ## Example
 
