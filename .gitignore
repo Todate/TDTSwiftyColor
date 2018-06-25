@@ -39,4 +39,3 @@ Example/Podfile.lock
 *.lock
 
 # Other
-.swift-version
