@@ -1,7 +1,7 @@
 use_frameworks!
 target 'TDTSwiftyColor_Tests' do
   pod 'TDTSwiftyColor', :path => '../'
-  
-  pod 'Quick', '~> 1.0.0'
-  pod 'Nimble', '~> 5.1.1'
+
+  pod 'Quick'
+  pod 'Nimble'
 end
