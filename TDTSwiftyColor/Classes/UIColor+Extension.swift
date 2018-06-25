@@ -63,12 +63,12 @@ extension UIColor {
 
         guard regex.numberOfMatches(in: trimmed,
                                     options: NSRegularExpression.MatchingOptions(),
-                                    range: NSRange(location: 0, length: trimmed.characters.count)) > 0 else {
+                                    range: NSRange(location: 0, length: trimmed.count)) > 0 else {
                                         self.init(rgb: 0x000000)
                                         return
         }
 
-        guard [3, 6, 8].contains(trimmed.characters.count) else {
+        guard [3, 6, 8].contains(trimmed.count) else {
             self.init(rgb: 0x000000)
             return
         }
@@ -76,8 +76,8 @@ extension UIColor {
         var hexStr = ""
 
         // 3文字の場合、6文字に変換させる
-        if trimmed.characters.count == 3 {
-            for c in trimmed.characters {
+        if trimmed.count == 3 {
+            for c in trimmed {
                 hexStr += "\(c)\(c)"
             }
         } else {
@@ -85,7 +85,7 @@ extension UIColor {
         }
 
         // 6文字の場合、alpha分を合わせて8文字にする
-        if hexStr.characters.count == 6 {
+        if hexStr.count == 6 {
             hexStr = "FF" + hexStr
         }
 
